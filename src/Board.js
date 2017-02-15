@@ -146,21 +146,37 @@
     //
     // test if a specific major diagonal on this board contains a conflict
     hasMajorDiagonalConflictAt: function(majorDiagonalColumnIndexAtFirstRow) {
-      // Iterate through each row
-        // Locate first instance of the chess piece
-          // Save the co-ordinate location of the found chess piece
+      var board = this.rows();
+      var row;
+      var column = majorDiagonalColumnIndexAtFirstRow;
 
-      // Iterate through subsequent rows
-        // Check if chess piece exists at column+1 of the first chess piece
-          // Return true
-        // Else  
-          // Increase counter for the column variable
+      for (var i = 0; i < board.length; i++) {
+        if (board[i][column] === 1) {
+          row = i;
+          break;
+        }
+      }
+      column = column + 1;
+      for (var k = row + 1; k < board.length; k++) {
+        if (board[k][column]) {
+          return true;
+        } else {
+          column++;
+        }
+      }
       return false;
     },
 
     // test if any major diagonals on this board contain conflicts
     hasAnyMajorDiagonalConflicts: function() {
-      return false; // fixme
+      var board = this.rows();
+
+      for (var i = 0; i < board.length; i++) {
+        if (this.hasMajorDiagonalConflictAt(i)) {
+          return true;
+        }
+      }
+      return false;
     },
 
 

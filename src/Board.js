@@ -113,18 +113,18 @@
     //
     // test if a specific column on this board contains a conflict
     hasColConflictAt: function(colIndex) {
-    var board = this.rows();
-    var count = 0;
+      var board = this.rows();
+      var count = 0;
     // Iterate through board
       for (var i = 0; i < board.length; i++) {
     // Check if board[i][colIndex] = 1
         if (board[i][colIndex] === 1) {
         // Increase count
-        count++;
+          count++;
         }
       }
     // Return count > 1
-      return count > 1
+      return count > 1;
     },
 
     // test if any columns on this board contain conflicts
@@ -146,7 +146,16 @@
     //
     // test if a specific major diagonal on this board contains a conflict
     hasMajorDiagonalConflictAt: function(majorDiagonalColumnIndexAtFirstRow) {
-      return false; // fixme
+      // Iterate through each row
+        // Locate first instance of the chess piece
+          // Save the co-ordinate location of the found chess piece
+
+      // Iterate through subsequent rows
+        // Check if chess piece exists at column+1 of the first chess piece
+          // Return true
+        // Else  
+          // Increase counter for the column variable
+      return false;
     },
 
     // test if any major diagonals on this board contain conflicts

@@ -88,7 +88,7 @@
       });
 
       // If array total > 1, there is a conflict
-      if (sum > 1) {
+      if (sum > 1) { 
         return true;
       } else {
         return false;

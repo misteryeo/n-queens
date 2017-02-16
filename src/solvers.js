@@ -11,13 +11,25 @@
 // take a look at solversSpec.js to see what the tests are expecting
 
 
-// return a matrix (an array of arrays) representing a single nxn chessboard, with n rooks placed such that none of them can attack each other
-
-
+// return a matrix (an array of arrays) representing a single nxn chessboard, with n rooks placed such that none of them can attack each other 
 
 window.findNRooksSolution = function(n) {
-  var solution = undefined; //fixme
-
+  var solution = [];
+  for (var z = 0; z < n; z++) {
+    solution.push(Array(n));
+  }
+  for (var i = 0; i < n; i++) {
+    for (var j = 0; j < n; j++) {
+      solution[i][j] = 0;
+    }
+  }
+  for (var i = 0; i < n; i++) {
+    for (var j = 0; j < n; j++) {
+      if (i === j) {
+        solution[i][j] = 1;
+      }
+    }
+  }
   console.log('Single solution for ' + n + ' rooks:', JSON.stringify(solution));
   return solution;
 };
@@ -32,6 +44,18 @@ window.countNRooksSolutions = function(n) {
 
 // return a matrix (an array of arrays) representing a single nxn chessboard, with n queens placed such that none of them can attack each other
 window.findNQueensSolution = function(n) {
+  // setup our board 
+  // come up with any configuration 
+  // check configuration against helper methods
+    // if config returns true all methods
+    // return solution 
+  // else come up with new config 
+
+  
+  // iterate through board (two nested for loops)
+    // assign a rook into column 0 row 0 
+    // 
+
   var solution = undefined; //fixme
 
   console.log('Single solution for ' + n + ' queens:', JSON.stringify(solution));

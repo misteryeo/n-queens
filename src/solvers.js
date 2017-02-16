@@ -39,6 +39,7 @@ window.countNRooksSolutions = function(n) {
     solutionCount = 1;
     return solutionCount;
   }*/
+  
   var solutionCount = 0;
   var board = new Board({'n': n});
 

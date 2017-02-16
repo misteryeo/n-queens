@@ -73,7 +73,6 @@ window.findNQueensSolution = function(n) {
 
   // iterate through board (two nested for loops)
     // assign a rook into column 0 row 0 
-    // 
 
   var solution = undefined; //fixme
 

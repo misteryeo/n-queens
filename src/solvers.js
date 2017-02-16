@@ -20,13 +20,10 @@ window.findNRooksSolution = function(n) {
   }
   for (var i = 0; i < n; i++) {
     for (var j = 0; j < n; j++) {
-      solution[i][j] = 0;
-    }
-  }
-  for (var i = 0; i < n; i++) {
-    for (var j = 0; j < n; j++) {
       if (i === j) {
         solution[i][j] = 1;
+      } else {
+        solution[i][j] = 0;
       }
     }
   }
@@ -51,7 +48,7 @@ window.findNQueensSolution = function(n) {
     // return solution 
   // else come up with new config 
 
-  
+
   // iterate through board (two nested for loops)
     // assign a rook into column 0 row 0 
     // 

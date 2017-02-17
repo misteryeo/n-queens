@@ -64,21 +64,20 @@ window.countNRooksSolutions = function(n) {
 
 // return a matrix (an array of arrays) representing a single nxn chessboard, with n queens placed such that none of them can attack each other
 window.findNQueensSolution = function(n) {
-  if (n === 0) {
-    return [];
-  }
-  if (n === 0) {
-    return [[]];
-  }
-  if (n === 2) {
-    return [[], []];
-  }
-  if (n === 3) {
-    return [[], [], []];
-  }
+
   var solutionCount = 0;
   var board = new Board({'n': n});
   var solution;
+
+  if (n === 1) {
+    board.togglePiece(0, 0);
+    return board.rows();
+  }
+
+  if (n === 0 || n === 2 || n === 3) {
+    return board.rows();
+  }
+
   var findSolutionCount = function(row) {
     if (row === n) {
       solutionCount++;
